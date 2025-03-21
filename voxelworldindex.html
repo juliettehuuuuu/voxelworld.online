@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Voxel World online - Build, explore, and craft in a vibrant block universe with limitless possibilities. Free to play in your browser!">
+    <title>Voxel World - Explore, Build and Craft in a 3D Block Universe | voxelworld.online</title>
+    <link rel="canonical" href="https://voxelworld.online">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            blue: '#007AFF',
+                            darkblue: '#0062CC',
+                            red: '#FF3B30',
+                            green: '#34C759',
+                            gray: '#8E8E93',
+                            lightgray: '#F2F2F7',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer base {
+            body {
+                @apply bg-apple-lightgray text-gray-800 font-sans;
+            }
+            h1 {
+                @apply text-4xl md:text-5xl font-bold text-apple-blue mb-4;
+            }
+            h2 {
+                @apply text-2xl md:text-3xl font-semibold text-gray-800 mb-3 mt-8;
+            }
+            p {
+                @apply mb-4 text-base md:text-lg;
+            }
+            .container {
+                @apply px-4 md:px-8 mx-auto max-w-6xl;
+            }
+            .game-container {
+                @apply w-full overflow-hidden rounded-xl shadow-lg bg-white relative;
+            }
+            .cta-button {
+                @apply bg-apple-blue text-white font-bold py-3 px-6 rounded-full hover:bg-apple-darkblue transition-colors inline-block;
+            }
+            .feature-card {
+                @apply bg-white p-6 rounded-xl shadow-md;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-white shadow-sm py-4 sticky top-0 z-10">
+        <div class="container flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold text-apple-blue">voxelworld.online</a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-apple-blue transition-colors">About</a></li>
+                    <li><a href="#game" class="hover:text-apple-blue transition-colors">Play Game</a></li>
+                    <li><a href="#features" class="hover:text-apple-blue transition-colors">Features</a></li>
+                    <li><a href="#how-to-play" class="hover:text-apple-blue transition-colors">How to Play</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-apple-blue" id="menu-toggle">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+        <div class="container md:hidden hidden" id="mobile-menu">
+            <ul class="py-2">
+                <li><a href="#about" class="block py-2 hover:text-apple-blue transition-colors">About</a></li>
+                <li><a href="#game" class="block py-2 hover:text-apple-blue transition-colors">Play Game</a></li>
+                <li><a href="#features" class="block py-2 hover:text-apple-blue transition-colors">Features</a></li>
+                <li><a href="#how-to-play" class="block py-2 hover:text-apple-blue transition-colors">How to Play</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container py-8">
+        <section class="text-center py-12">
+            <h1>Voxel World: Build, Explore, Create</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Unleash your creativity in a vibrant 3D block universe where you can build, explore, and craft with limitless possibilities!</p>
+            <a href="#game" class="cta-button">Play Now</a>
+        </section>
+
+        <section id="game" class="py-12">
+            <h2 class="text-center">Play Voxel World Online</h2>
+            <p class="text-center mb-8">Jump into the full 3D block adventure right in your browser - no downloads required!</p>
+            <div class="game-container" style="height: 80vh; max-height: 600px;">
+                <iframe 
+                    src="https://cloud.onlinegames.io/games/2025/unity/voxel-world/index-og.html" 
+                    frameborder="0" 
+                    allowfullscreen 
+                    scrolling="no"
+                    class="w-full h-full">
+                </iframe>
+            </div>
+            <div class="mt-4 text-center text-sm text-apple-gray">
+                <p class="mb-0">Having trouble loading the game? <a href="https://cloud.onlinegames.io/games/2025/unity/voxel-world/index-og.html" target="_blank" class="text-apple-blue underline">Try opening it in a new tab</a></p>
+            </div>
+        </section>
+
+        <section id="about" class="py-12">
+            <h2>About Voxel World</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <p>Voxel World is an immersive 3D block-building sandbox game inspired by the creativity and exploration of popular voxel-based titles. Set in a procedurally generated world made entirely of colorful blocks, this game gives you the freedom to build, mine, craft, and adventure at your own pace.</p>
+                    <p>Unlike many complex sandbox games, Voxel World offers an accessible experience that can be enjoyed directly in your browser, with no downloads or installations required. The intuitive controls and simple mechanics make it perfect for players of all ages and experience levels.</p>
+                </div>
+                <div>
+                    <p>The game features a vibrant, procedurally generated world filled with diverse biomes, from lush forests and towering mountains to deep caves and vast oceans. Each environment is teeming with resources to collect and utilize in your creative endeavors.</p>
+                    <p>Whether you want to construct massive architectural wonders, survive against environmental challenges, or simply explore the seemingly endless world, Voxel World provides the perfect canvas for your imagination. Your only limitation is your creativity!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="py-12">
+            <h2 class="text-center mb-8">Game Features</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="feature-card">
+                    <h2 class="text-xl">Procedural World Generation</h2>
+                    <p>Explore unique, randomly generated worlds with diverse biomes, landscapes, and underground cave systems, ensuring no two adventures are the same.</p>
+                </div>
+                <div class="feature-card">
+                    <h2 class="text-xl">Creative Building</h2>
+                    <p>Express your creativity by constructing anything you can imagine using a wide variety of colorful blocks and materials.</p>
+                </div>
+                <div class="feature-card">
+                    <h2 class="text-xl">Resource Gathering</h2>
+                    <p>Mine and collect various resources throughout the world to craft tools, building materials, and other useful items.</p>
+                </div>
+                <div class="feature-card">
+                    <h2 class="text-xl">Day/Night Cycle</h2>
+                    <p>Experience a dynamic world with changing lighting conditions as time passes, affecting visibility and atmosphere.</p>
+                </div>
+                <div class="feature-card">
+                    <h2 class="text-xl">Accessible Gameplay</h2>
+                    <p>Jump right into the action with intuitive controls and mechanics that are easy to learn but offer depth for experienced players.</p>
+                </div>
+                <div class="feature-card">
+                    <h2 class="text-xl">Browser-Based</h2>
+                    <p>Play instantly on any device with a compatible browser - no downloads, installations, or high-end hardware required.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="py-12">
+            <h2 class="text-center mb-8">How to Play</h2>
+            <div class="bg-white p-8 rounded-xl shadow-md">
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h2 class="text-xl mb-4">Game Controls</h2>
+                        <p>Voxel World features intuitive controls designed for easy navigation and interaction:</p>
+                        <ul class="list-disc pl-5 mb-4 space-y-2">
+                            <li><strong>W, A, S, D:</strong> Move your character forward, left, backward, and right</li>
+                            <li><strong>Space:</strong> Jump</li>
+                            <li><strong>Shift:</strong> Sprint/run faster</li>
+                            <li><strong>Mouse Movement:</strong> Look around</li>
+                            <li><strong>Left Mouse Button:</strong> Break blocks</li>
+                            <li><strong>Right Mouse Button:</strong> Place blocks</li>
+                            <li><strong>E:</strong> Open inventory</li>
+                            <li><strong>1-9 Keys:</strong> Select items from your hotbar</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="text-xl mb-4">Tips for Beginners</h2>
+                        <ul class="list-disc pl-5 space-y-2">
+                            <li>Start by gathering basic resources like wood by breaking tree blocks</li>
+                            <li>Create a shelter before nightfall for safety and as a base of operations</li>
+                            <li>Craft basic tools to make resource gathering more efficient</li>
+                            <li>Explore caves carefully to find valuable minerals and resources</li>
+                            <li>Use the crafting interface to combine materials into new items</li>
+                            <li>Try different block combinations to create unique structures and designs</li>
+                            <li>Take screenshots of your creations to share with friends!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-12 text-center">
+            <h2>Ready to Create Your World?</h2>
+            <p class="mb-8 max-w-2xl mx-auto">Dive into Voxel World now and start building, mining, and exploring in your very own block universe!</p>
+            <a href="#game" class="cta-button">Play Voxel World Now</a>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-4">Voxel World</h2>
+                    <p class="text-gray-300">A browser-based 3D block-building sandbox where you can explore, build, and create without limits.</p>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-4">Quick Links</h2>
+                    <ul class="space-y-2">
+                        <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">About the Game</a></li>
+                        <li><a href="#game" class="text-gray-300 hover:text-white transition-colors">Play Online</a></li>
+                        <li><a href="#features" class="text-gray-300 hover:text-white transition-colors">Game Features</a></li>
+                        <li><a href="#how-to-play" class="text-gray-300 hover:text-white transition-colors">How to Play</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="text-xl font-bold text-white mb-4">Legal Information</h2>
+                    <p class="text-gray-300">Voxel World is provided as a free online gaming experience. This website is not affiliated with the original game creators.</p>
+                    <p class="text-gray-300 mt-4">© 2024 voxelworld.online. All game rights belong to their respective owners.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                document.getElementById('mobile-menu').classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add event listener for iframe loading issues
+        window.addEventListener('load', function() {
+            const gameIframe = document.querySelector('iframe');
+            
+            // Function to check if iframe loaded properly
+            function checkIframe() {
+                try {
+                    // Try to access iframe content
+                    const iframeContent = gameIframe.contentWindow || gameIframe.contentDocument;
+                    if (!iframeContent) {
+                        showLoadingError();
+                    }
+                } catch (e) {
+                    // If there's an error (e.g., cross-origin), don't show error yet
+                    // as this could be normal for cross-origin iframes
+                }
+            }
+            
+            // Function to show loading error message
+            function showLoadingError() {
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'absolute inset-0 flex items-center justify-center bg-white bg-opacity-90';
+                errorDiv.innerHTML = `
+                    <div class="text-center p-6">
+                        <p class="text-xl font-bold text-apple-red mb-2">Game loading issue detected</p>
+                        <p class="mb-4">The game may be temporarily unavailable or experiencing high traffic.</p>
+                        <a href="https://cloud.onlinegames.io/games/2025/unity/voxel-world/index-og.html" target="_blank" 
+                           class="bg-apple-blue text-white font-bold py-2 px-4 rounded-full hover:bg-apple-darkblue transition-colors inline-block">
+                            Try in New Tab
+                        </a>
+                    </div>
+                `;
+                
+                const gameContainer = document.querySelector('.game-container');
+                gameContainer.appendChild(errorDiv);
+            }
+            
