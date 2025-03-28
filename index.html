@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9LGFZELGB4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9LGFZELGB4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Play Voxel World online - Build, explore, and craft in a vibrant block universe with limitless possibilities. Free to play in your browser!">
@@ -263,14 +272,4 @@
                     <div class="text-center p-6">
                         <p class="text-xl font-bold text-apple-red mb-2">Game loading issue detected</p>
                         <p class="mb-4">The game may be temporarily unavailable or experiencing high traffic.</p>
-                        <a href="https://cloud.onlinegames.io/games/2025/unity/voxel-world/index-og.html" target="_blank" 
-                           class="bg-apple-blue text-white font-bold py-2 px-4 rounded-full hover:bg-apple-darkblue transition-colors inline-block">
-                            Try in New Tab
-                        </a>
-                    </div>
-                `;
-                
-                const gameContainer = document.querySelector('.game-container');
-                gameContainer.appendChild(errorDiv);
-            }
-            
+
